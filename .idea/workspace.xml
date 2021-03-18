@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61c91f32-051a-4bac-af32-a7d1a374139e" name="Default Changelist" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/img/jacket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/shirt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/shoes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/socks.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_eShop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_eShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/my_eShop.js" afterDir="false" />
@@ -53,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616072861983</updated>
-      <workItem from="1616072864948" duration="3531000" />
+      <workItem from="1616072864948" duration="13977000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1616073714388</created>
@@ -69,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616075577167</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="solved">
+      <created>1616076834104</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616076834104</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,7 +80,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="solved" />
   </component>
   <component name="WindowStateProjectService">
     <state x="703" y="298" key="FileChooserDialogImpl" timestamp="1616075482208">
