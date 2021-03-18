@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61c91f32-051a-4bac-af32-a7d1a374139e" name="Default Changelist" comment="Init commit" />
+    <list default="true" id="61c91f32-051a-4bac-af32-a7d1a374139e" name="Default Changelist" comment="Init commit">
+      <change afterPath="$PROJECT_DIR$/img/jacket.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shirt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shoes.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/socks.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_eShop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_eShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/my_eShop.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +21,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -31,6 +41,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616072861983</updated>
-      <workItem from="1616072864948" duration="2216000" />
+      <workItem from="1616072864948" duration="3531000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1616073714388</created>
@@ -51,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616073714388</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1616075577167</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616075577167</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -59,17 +77,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="703" y="298" key="FileChooserDialogImpl" timestamp="1616075482208">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="703" y="298" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616075482208" />
-    <state x="801" y="454" key="Github.ShareDialog" timestamp="1616073553046">
+    <state x="801" y="454" key="Github.ShareDialog" timestamp="1616075610629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="801" y="454" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616073553046" />
+    <state x="801" y="454" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616075610629" />
     <state x="515" y="276" key="Vcs.Push.Dialog.v2" timestamp="1616073836617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

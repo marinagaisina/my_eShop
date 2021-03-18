@@ -4,13 +4,51 @@
     <meta charset="UTF-8">
     <title>my_eShop</title>
     <script src="my_eShop.js"></script>
+    <link rel="stylesheet" href="my_eShop.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--    jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<header>
-    <button class="cart-button" type="button">Корзина</button>
+<header class="bg-secondary">
+    <div class="container text-right p-2">
+        <button class="cart-button btn btn-primary btn-lg" type="button">Cart</button>
+    </div>
 </header>
-<main>
-    <div class="goods-list"></div>
+<main class="container p-2">
+    <div class="goods-list d-flex flex-wrap"></div>
 </main>
+
+<script>
+    'use strict';
+    const goods = [
+        { title: 'Shirt', img: 'img/shirt.jpg', price: 150 },
+        { title: 'Socks', img: 'img/socks.jpg', price: 50 },
+        { title: 'Jacket', img: 'img/jacket.jpg', price: 350 },
+        { title: 'Shoes', img: 'img/shoes.jpg', price: 250 },
+        { title: 'Socks1', img: 'img/socks.jpg', price: 50 },
+        { title: 'Shirt1', img: 'img/shirt.jpg', price: 150 },
+    ];
+
+    const renderGoodsItem = (image, ...rest) =>
+        `<div class="goods-item d-flex flex-column rounded-lg bg-light mr-2 ml-2 mb-4 border">
+                <img class="img-fluid mb-auto" src="${image}" alt="img">
+                <div class="d-flex justify-content-between">
+                    <h3>${rest[0]}</h3><p>$${rest[1]}</p>
+                    <button class="btn btn-warning">Add to cart</button>
+                    </div>
+             </div>`;
+
+    const renderGoodsList = (list = goods) =>
+        document.querySelector('.goods-list').innerHTML = list.map(item => renderGoodsItem(item.img, item.title, item.price)).join(" ");
+
+    renderGoodsList();  //вызов функции с параметром по умолчанию
+</script>
 </body>
 </html>
