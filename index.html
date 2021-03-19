@@ -7,21 +7,41 @@
     <script src="test.js"></script>
     <link rel="stylesheet" href="my_eShop.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<!--    &lt;!&ndash;    jQuery library&ndash;&gt;-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-<!--    &lt;!&ndash; Popper JS &ndash;&gt;-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
-<!--    &lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
-<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+    <!--    jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 <header class="bg-secondary">
-    <div class="container text-right p-2">
+    <div class="container d-flex justify-content-between">
+        <ul class="nav nav-tabs">
+            <li class="nav-item rounded-top">
+                <a class="nav-link active" data-toggle="tab" href="#home">HOME</a>
+            </li>
+            <li class="nav-item rounded-top">
+                <a class="nav-link" data-toggle="tab" href="#testPage">testPage</a>
+            </li>
+            <li class="nav-item rounded-top">
+                <a class="nav-link" data-toggle="tab" href="#cart">Cart</a>
+            </li>
+        </ul>
         <button class="cart-button btn btn-primary btn-lg" type="button">Cart</button>
     </div>
 </header>
-<main class="container p-2">
-    <div class="goods-list d-flex flex-wrap"></div>
+<main class="container p-0">
+    <!--        Tab panes-->
+    <div class="tab-content pt-5">
+        <div class="tab-pane p-0 container active" id="home">
+            <div class="goods-list d-flex flex-wrap"></div>
+        </div>
+        <div class="tab-pane p-0 container" id="testPage">
+            <div class="products-list"></div>
+        </div>
+        <div class="tab-pane p-0 container" id="cart"></div>
+    </div>
 </main>
 
 </body>
