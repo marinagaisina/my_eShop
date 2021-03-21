@@ -26,7 +26,7 @@ const renderProduct = ({ name, price } = DEFAULT_LIST[0]) => {
 }
 
 const renderProductsList = (products = DEFAULT_LIST) => {
-    return products.map(p => renderProduct(p)).join('');
+    document.querySelector('.products-list').innerHTML = `<ul>${products.map(product => renderProduct(product)).join('')}</ul>`;
 }
 
 // window.onload = () => {

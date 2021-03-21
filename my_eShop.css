@@ -15,3 +15,17 @@
 .nav-tabs .nav-item a {
     height: 100%;
 }
+.cart-list img {
+    max-width: 70px;
+}
+#cartTable {
+    width: min-content;
+}
+
+#cartTable td {
+    vertical-align: middle;
+}
+
+input {
+    width: 70px;
+}
