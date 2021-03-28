@@ -7,9 +7,10 @@ class CartList {
     addToCart(id) {
         cart.clear();   //
         for (let i=0;i<list.goods.length;i++) {     //поиск по "базе данных"
-            if (list.goods[i].id === id) {
+            if (list.goods[i].id_product === id) {
                 let item = list.goods[i];
-                cart.cartItems.push(new CartItem(item.id,item.title, item.img, item.price));
+                cart.cartItems.push(new CartItem(item.id_product,item.product_name, item.price));
+                break;
             }
         }
         cart.render();
@@ -34,16 +35,16 @@ class CartList {
         });
         listHTML += `<tr>
                         <td colspan="5" class="text-right border-bottom-0"><h4>TOTAL:</h4></td>
-                        <td colspan="2" class="border-bottom-0"><h4>$${GoodsItem.floatToFixed(this.calculateTotal())}</h4></td>
+                        <td colspan="2" class="border-bottom-0"><h4>${GoodsItem.floatToFixed(this.calculateTotal())}</h4></td>
                      </tr>
                      <tr>
                         <td colspan="5" class="text-right border-0">FEDERAL TAX (7%):</td>
-                        <td colspan="2" class="border-0">$${GoodsItem.floatToFixed(this.calculateTotal()*0.07)}</td>
+                        <td colspan="2" class="border-0">${GoodsItem.floatToFixed(this.calculateTotal()*0.07)}</td>
                      </tr>
                      <tr>
                      <tr>
                         <td colspan="5" class="text-right border-0">TOTAL with tax:</td>
-                        <td colspan="2" class="border-0">$${GoodsItem.floatToFixed(this.calculateTotal()*1.07)}</td>
+                        <td colspan="2" class="border-0">${GoodsItem.floatToFixed(this.calculateTotal()*1.07)}</td>
                      </tr>`;
         document.querySelector('tbody').insertAdjacentHTML('beforeend', listHTML);
     }
@@ -54,10 +55,11 @@ class CartList {
    //удаление элемента из корзины
     removeItem = id => {
         for (let i=0;i<this.cartItems.length;i++) {
-            if (this.cartItems[i].id === id) {
+            if (this.cartItems[i].id_product === id) {
                 this.cartItems.splice(i, 1);
                 this.clear();
                 this.render();
+                return;
             }
         }
     }
@@ -70,7 +72,7 @@ class CartList {
     updateQuantity = (input, id) => {
         const newValue = input.value;
         for (let i=0;i<this.cartItems.length;i++) {
-            if (this.cartItems[i].id === id) {
+            if (this.cartItems[i].id_product === id) {
                 const elInCart = this.cartItems[i];
                 elInCart.totalPrice = elInCart.price*newValue;
                 elInCart.quantity = newValue;
