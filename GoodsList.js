@@ -13,13 +13,11 @@ class GoodsList {
         //     {id: 127, title: 'Socks1', img: 'img/socks.jpg', price: 50},
         //     {id: 128, title: 'Shirt1', img: 'img/shirt.jpg', price: 150},
         // ];
+        const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
         makeGETRequest(`${API_URL}/catalogData.json`, (goods) =>{
             this.goods = JSON.parse(goods);
             cb();
         })
-        // if (this.goods.length === 0) {
-        //     return this.goods = [DEFAULT_PRODUCT];  //если с сервера ничего не пришло, то возвращаем продукт по умолчанию
-        // }
     }
     render() {
         let listHTML = '';

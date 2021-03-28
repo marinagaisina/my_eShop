@@ -3,9 +3,6 @@
 
 const DEFAULT_PRODUCT = new GoodsItem(0, 'Default Item', 0);
 const list = new GoodsList();
-list.fetchGoods(() => {
-    list.render();
-});
 const cart = new CartList();
 
 // if (document.addEventListener) {
@@ -16,7 +13,9 @@ const cart = new CartList();
 // }
 
 window.onload = () => {
-    //list.render();
+    list.fetchGoods(() => {
+        list.render();
+    });
     cart.render();
     // document.getElementsByTagName('input').forEach(el => {
     //     el.addEventListener('onChange', cart.updateQuantity);
