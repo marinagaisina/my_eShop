@@ -10,8 +10,7 @@ function makeGETRequest(url, callback) {
     // xhr.status == 200 (successful), 404 (not found), 500 (server error)
     console.log(xhr.readyState);
     xhr.onreadystatechange = function () {
-        console.log('inside'+xhr.status);
-        console.log('ready state: '+xhr.readyState);
+        console.log('ready state: ' + xhr.readyState);
         if (xhr.readyState === 4 && xhr.status === 200) {
             console.log(xhr.responseText+'\n'+xhr.responseXML+'\n'+xhr.status);
             callback(xhr.responseText);

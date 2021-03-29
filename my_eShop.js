@@ -2,8 +2,10 @@
 // --------- MAIN -----------------------------------------------------------------------
 
 const DEFAULT_PRODUCT = new GoodsItem(0, 'Default Item', 0);
-const list = new GoodsList();
-const cart = new CartList();
+const list1 = new GoodsList();
+const list2 = new GoodsList();
+const cart1 = new CartList();
+const cart2 = new CartList();
 
 // if (document.addEventListener) {
 //     document.addEventListener("click", handleClick, false);
@@ -13,10 +15,11 @@ const cart = new CartList();
 // }
 
 window.onload = () => {
-    list.fetchGoods(() => {
-        list.render();
+   // list1.fetch();//!!!!!!!!!!
+    list2.fetchGoods(() => {
+        list2.render(cart2,'.products-list');
     });
-    cart.render();
+    cart2.render('#cart2 tbody');
     // document.getElementsByTagName('input').forEach(el => {
     //     el.addEventListener('onChange', cart.updateQuantity);
     // });

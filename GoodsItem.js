@@ -6,13 +6,14 @@ class GoodsItem {
         //this.img = img;
         this.price = price;
     }
-    render() {
+    render(cart) {
+        console.log(cart);
         return `<div id="${this.id_product}" class="goods-item d-flex flex-column rounded-lg bg-light mr-2 ml-2 mb-4 border">
                     <!-- <img class="img-fluid mb-auto" src="" alt="img"> -->
                     <h3>${this.product_name}</h3>
                     <div class="d-flex justify-content-between">
                         <p>${this.price}</p>
-                        <button class="addToCart btn btn-warning" onclick="cart.addToCart(${this.id_product})">Add to cart</button>
+                        <button class="addToCart btn btn-warning" onclick="cart2.addToCart(${this.id_product})">Add to cart</button>
                     </div>
                 </div>`;
     }

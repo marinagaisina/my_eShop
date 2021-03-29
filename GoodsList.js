@@ -19,12 +19,12 @@ class GoodsList {
             cb();
         })
     }
-    render() {
+    render(cart, place) {
         let listHTML = '';
         this.goods.forEach(good => {
             const goodItem = new GoodsItem(good.id_product, good.product_name, good.price);
-            listHTML += goodItem.render();
+            listHTML += goodItem.render(cart);
         });
-        document.querySelector('.goods-list').innerHTML = listHTML;
+        document.querySelector(place).innerHTML = listHTML;
     }
 }
