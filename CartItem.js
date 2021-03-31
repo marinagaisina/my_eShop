@@ -10,7 +10,7 @@ class CartItem extends GoodsItem {
         const cartItemId = cart.cartItems[index].id_product;
         return `<tr class="cart-item">
                     <td>${index+1}</td>
-                    <!-- <td><img class="img-fluid" src="" alt="img"></td> -->
+                    <td></td> <!--<img class="img-fluid" src="" alt="img"> -->
                     <td><h4>${this.product_name}</h4></td>
                     <td>${this.price}</td>
                     <td><input type="number" onchange="cart.updateQuantity(this, ${cartItemId})" value="${this.quantity}" min="1"></td>
