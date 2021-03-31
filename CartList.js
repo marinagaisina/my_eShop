@@ -5,15 +5,15 @@ class CartList {
         this.cartItems = [];
     }
     addToCart(id) {
-        this.clear('#cart2 tbody');   //
-        for (let i=0;i<list2.goods.length;i++) {     //поиск по "базе данных"
-            if (list2.goods[i].id_product === id) {
-                let item = list2.goods[i];
+        this.clear();   //
+        for (let i=0;i<list.goods.length;i++) {     //поиск по "базе данных"
+            if (list.goods[i].id_product === id) {
+                let item = list.goods[i];
                 this.cartItems.push(new CartItem(item.id_product,item.product_name, item.price));
                 break;
             }
         }
-        this.render('#cart2 tbody');
+        this.render();
         //const buttonClicked = event.target;
         //document.querySelectorAll('.goods-item').forEach(item => {
         //     if (item.id === buttonClicked.parentElement.parentElement.id);
@@ -28,7 +28,7 @@ class CartList {
         this.cartItems.forEach(item => total += Number.parseFloat(item.totalPrice));
         return total;
     }
-    render(place) {
+    render() {
         let listHTML = '';
         this.cartItems.forEach((item, index) => {
             listHTML += item.render(index);
@@ -46,10 +46,10 @@ class CartList {
                         <td colspan="5" class="text-right border-0">TOTAL with tax:</td>
                         <td colspan="2" class="border-0">${GoodsItem.floatToFixed(this.calculateTotal()*1.07)}</td>
                      </tr>`;
-        document.querySelector(place).insertAdjacentHTML('beforeend', listHTML);
+        document.querySelector('tbody').insertAdjacentHTML('beforeend', listHTML);
     }
-    clear(place) {
-        document.querySelector(place).innerHTML = '';
+    clear() {
+        document.querySelector('tbody').innerHTML = '';
     }
 
    //удаление элемента из корзины
@@ -57,8 +57,8 @@ class CartList {
         for (let i=0;i<this.cartItems.length;i++) {
             if (this.cartItems[i].id_product === id) {
                 this.cartItems.splice(i, 1);
-                this.clear('#cart2 tbody');
-                this.render('#cart2 tbody');
+                this.clear();
+                this.render();
                 return;
             }
         }
