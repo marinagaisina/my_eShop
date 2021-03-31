@@ -4,7 +4,7 @@ class GoodsList {
     constructor() {
         this.goods = [];
     }
-    fetchGoods(cb) {
+    fetchGoods(url) {
         // this.goods = [
         //     {id: 123, title: 'Shirt', img: 'img/shirt.jpg', price: 150},
         //     {id: 124, title: 'Socks', img: 'img/socks.jpg', price: 50},
@@ -13,18 +13,24 @@ class GoodsList {
         //     {id: 127, title: 'Socks1', img: 'img/socks.jpg', price: 50},
         //     {id: 128, title: 'Shirt1', img: 'img/shirt.jpg', price: 150},
         // ];
-        const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-        makeGETRequest(`${API_URL}/catalogData.json`, (goods) =>{
-            this.goods = JSON.parse(goods);
-            cb();
-        })
+
+        makeGETRequest('GET',url)
+            .then((data) => {
+                console.log('ok', data);
+                this.goods = data;
+                list.render();
+            })
+            .catch((err) => {
+                console.log(err);
+            })
     }
-    render(cart, place) {
+
+    render() {
         let listHTML = '';
         this.goods.forEach(good => {
             const goodItem = new GoodsItem(good.id_product, good.product_name, good.price);
-            listHTML += goodItem.render(cart);
+            listHTML += goodItem.render();
         });
-        document.querySelector(place).innerHTML = listHTML;
+        document.querySelector('.goods-list').innerHTML = listHTML;
     }
 }
