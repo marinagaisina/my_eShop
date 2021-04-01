@@ -22,6 +22,8 @@ class GoodsList {
             })
             .catch((err) => {
                 console.log(err);
+                this.goods = [DEFAULT_PRODUCT];
+                list.render();
             })
     }
 
@@ -32,5 +34,15 @@ class GoodsList {
             listHTML += goodItem.render();
         });
         document.querySelector('.goods-list').innerHTML = listHTML;
+    }
+
+    //поиск id элемента в переданном списке
+    static hasItem = (list, id) => {
+        for (let i=0;i<list.length;i++) {
+            if (list[i].id_product === id) {
+                return list[i];
+            }
+        }
+        return null;
     }
 }

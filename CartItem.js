@@ -7,7 +7,7 @@ class CartItem extends GoodsItem {
         this.totalPrice = this.price;
     }
     render(index) {
-        const cartItemId = cart.cartItems[index].id_product;
+        const cartItemId = cart.cartItems[index].id_product; // находим id элемента, чтобы потом передавать его в функци updatedQuantity и removeItem
         return `<tr class="cart-item">
                     <td>${index+1}</td>
                     <td></td> <!--<img class="img-fluid" src="" alt="img"> -->

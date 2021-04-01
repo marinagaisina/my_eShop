@@ -10,9 +10,15 @@ window.onload = () => {
     cart.render();
 }
 
+//  USING fetch() API: (WORKS TOO!!!)
 
-
-
+// fetch(url1)
+//     .then((response) => response.json())
+//     .then((data) => {
+//         console.log(data);
+//         list.goods = data;
+//         list.render();
+//     });
 
 
 // if (document.addEventListener) {
