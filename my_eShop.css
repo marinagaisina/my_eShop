@@ -26,6 +26,24 @@ table td {
     vertical-align: middle !important;
 }
 
-input {
-    width: 70px !important;
+#searchForm {
+    height: fit-content;
+}
+
+#searchForm button {
+    border-color: rgb(206, 212, 218);
+}
+
+@media screen and (max-width: 768px){
+    #containerHeader {
+        max-width: 100%;
+    }
+    #containerHeader form {
+        padding: 0;
+    }
+    #containerHeader ul ~ button {
+        background-color: #6c757d;
+        border-color: white;
+        box-shadow: none;
+    }
 }

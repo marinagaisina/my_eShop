@@ -11,6 +11,7 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="my_eShop.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!--    jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Popper JS -->
@@ -20,16 +21,26 @@
 </head>
 <body>
 <header class="bg-secondary">
-    <div class="container d-flex justify-content-between">
-        <ul class="nav nav-tabs flex-nowrap">
-            <li class="nav-item rounded-top">
-                <a class="nav-link active" data-toggle="tab" href="#home">HOME</a>
-            </li>
-            <li class="nav-item rounded-top">
-                <a class="nav-link" data-toggle="tab" href="#cart">CART</a>
-            </li>
-        </ul>
-        <button class="cart-button btn btn-primary btn-lg" type="button">CART</button>
+    <div class="container" id="containerHeader">
+        <div class="d-flex row">
+            <ul class="col-lg-4 col-md-4 nav nav-tabs flex-nowrap">
+                <li class="nav-item rounded-top">
+                    <a class="nav-link active" data-toggle="tab" href="#home">HOME</a>
+                </li>
+                <li class="nav-item rounded-top">
+                    <a class="nav-link" data-toggle="tab" href="#cart">CART</a>
+                </li>
+            </ul>
+            <button class="col-lg-1 col-md-2 ml-auto cart-button btn btn-primary btn-lg" type="button">CART</button>
+            <form class="col-lg-4 col-md-5 align-self-center" id="searchForm">
+                <div class="input-group">
+                    <input id="searchInput" type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-light"><span class="fas fa-search"></span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </header>
 <main class="container p-0">
