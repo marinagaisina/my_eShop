@@ -32,10 +32,6 @@ table td {
     vertical-align: middle !important;
 }
 
-#searchForm {
-    height: fit-content;
-}
-
 #searchForm button {
     border-color: rgb(206, 212, 218);
 }
@@ -81,7 +77,6 @@ table td {
 
 @media screen and (max-width: 992px){
     .cartContent {
-        width: fit-content;
         left:30%;
     }
 }
@@ -107,5 +102,8 @@ table td {
     .cartContent {
         width: 100%;
         left: 0;
+    }
+    #searchForm {
+        padding: 0;
     }
 }

@@ -14,26 +14,20 @@ class GoodsList {
         //     {id: 127, title: 'Socks1', img: 'img/socks.jpg', price: 50},
         //     {id: 128, title: 'Shirt1', img: 'img/shirt.jpg', price: 150},
         // ];
-        alert('fetch');
+        //alert('fetch');
         makeGETRequest('GET',url)
             .then((data) => {
                 this.goods = JSON.parse(data);
                 this.filteredGoods = JSON.parse(data);
                 console.log('ok', data);
             })
-            .catch((err) => {
+            .catch((err) => {   //если с сервера данные не загружены, подставляем массив продуктов по умолчанию
                 console.log(err);
                 this.goods = [DEFAULT_PRODUCT];
+                this.filteredGoods = [DEFAULT_PRODUCT];
             })
             .finally(()=> {
                 list.render();
-                // filter Goods
-                const searchBtn = document.getElementById("searchBtn");
-                const searchInput = document.getElementById("searchInput");
-                searchBtn.addEventListener('click', (e) => {
-                    const value = searchInput.value;
-                    list.filterGoods(value);
-                })
             })
     }
 
@@ -44,7 +38,7 @@ class GoodsList {
     }
 
     render() {
-        alert('render');
+        //alert('render');
         let listHTML = '';
         this.filteredGoods.forEach(good => {
             const goodItem = new GoodsItem(good.id_product, good.product_name, good.price);

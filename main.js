@@ -11,8 +11,7 @@ const cart = new CartList();
 window.onload = () => {
     list.fetchGoods(url1);
     cart.render();
-
-
+    
 // Get the modal
     let cartModalWindow = document.getElementById("cartModalWindow");
 
@@ -38,6 +37,17 @@ window.onload = () => {
             cartModalWindow.style.display = "none";
         }
     }
+// filter Goods
+    const searchBtn = document.getElementById("searchBtn");
+    const searchInput = document.getElementById("searchInput");
+    searchBtn.addEventListener('click', (e) => {
+        const value = searchInput.value;
+        list.filterGoods(value);
+    })
+    searchInput.addEventListener('change', (e) => {
+        const value = searchInput.value;
+        list.filterGoods(value);
+    })
 }
 
 //  USING fetch() API: (WORKS TOO!!!)
