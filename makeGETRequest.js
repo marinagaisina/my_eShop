@@ -13,9 +13,10 @@ function makeGETRequest(method, url) {
             //console.log('ready state: '+xhr.readyState);
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
+                    alert(xhr.responseText);
                     console.log(xhr.responseText+'\n'+xhr.responseXML+'\n'+xhr.status);
-                    const goods = JSON.parse(xhr.responseText);
-                    resolve(goods);
+                    //const goods = JSON.parse(xhr.responseText);
+                    resolve(xhr.responseText);
                 } else {
                     reject('Error with status code: ', xhr.status);
                 }

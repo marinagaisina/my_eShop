@@ -7,13 +7,13 @@ const cart = new CartList();
 
 
 
+
 window.onload = () => {
     list.fetchGoods(url1);
     cart.render();
 
 
-
-    // Get the modal
+// Get the modal
     let cartModalWindow = document.getElementById("cartModalWindow");
 
 // Get the cart button
@@ -22,7 +22,7 @@ window.onload = () => {
 // Get the <span> element that closes the modal
     let span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal
+// When the user clicks the button, open the modal
     cartBtn.onclick = function() {
         cartModalWindow.style.display = "block";
     }
@@ -38,7 +38,6 @@ window.onload = () => {
             cartModalWindow.style.display = "none";
         }
     }
-
 }
 
 //  USING fetch() API: (WORKS TOO!!!)
