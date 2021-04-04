@@ -3,7 +3,7 @@
 }
 .nav-tabs {
     width: 430px;
-    border-bottom: 0px !important;
+    border-bottom: 0 !important;
 }
 .nav-tabs a {
     color: azure;
@@ -18,14 +18,14 @@
 .cart-list img {
     max-width: 70px;
 }
-#cartTable {
-    width: min-content;
+table {
+    width: min-content !important;
 }
 
-#cartTable td {
-    vertical-align: middle;
+table td {
+    vertical-align: middle !important;
 }
 
 input {
-    width: 70px;
+    width: 70px !important;
 }
