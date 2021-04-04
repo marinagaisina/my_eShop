@@ -9,7 +9,7 @@
     color: azure;
 }
 .nav-tabs .nav-item {
-    width: 32%;
+    /*width: 32%;*/
     margin: 0 1px 0 1px;
 }
 .nav-tabs .nav-item a {
@@ -18,8 +18,14 @@
 .cart-list img {
     max-width: 70px;
 }
+
+.cart-item input {
+    width: 70px;
+}
+
 table {
     width: min-content !important;
+    margin-inline: auto;
 }
 
 table td {
@@ -34,7 +40,53 @@ table td {
     border-color: rgb(206, 212, 218);
 }
 
-@media screen and (max-width: 768px){
+/*Cart Modal Window*/
+#cartModalWindow {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding-top: 47px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;  /*Full width */
+    height: 100%;  /*Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0); !* Fallback color *!*/
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.cartContent {
+    position: relative;
+    width: fit-content;
+    /*width: 40%;*/
+    top: 1px;
+    left: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 992px){
+    .cartContent {
+        width: fit-content;
+        left:30%;
+    }
+}
+
+@media screen and (max-width: 767px){
     #containerHeader {
         max-width: 100%;
     }
@@ -45,5 +97,15 @@ table td {
         background-color: #6c757d;
         border-color: white;
         box-shadow: none;
+    }
+
+    #cartModalWindow {
+        background-color: #ffffff;
+        top: 126px;
+        padding-top: 0;
+    }
+    .cartContent {
+        width: 100%;
+        left: 0;
     }
 }

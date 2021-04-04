@@ -5,9 +5,40 @@ const DEFAULT_PRODUCT = new GoodsItem(0, 'Default Item', 0);
 const list = new GoodsList();
 const cart = new CartList();
 
+
+
 window.onload = () => {
     list.fetchGoods(url1);
     cart.render();
+
+
+
+    // Get the modal
+    let cartModalWindow = document.getElementById("cartModalWindow");
+
+// Get the cart button
+    let cartBtn = document.getElementById("cartBtn");
+
+// Get the <span> element that closes the modal
+    let span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    cartBtn.onclick = function() {
+        cartModalWindow.style.display = "block";
+    }
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        cartModalWindow.style.display = "none";
+    }
+
+// When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === cartModalWindow) {
+            cartModalWindow.style.display = "none";
+        }
+    }
+
 }
 
 //  USING fetch() API: (WORKS TOO!!!)
