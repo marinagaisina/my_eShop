@@ -9,6 +9,7 @@
     <script src="CartList.js"></script>
     <script src="CartItem.js"></script>
     <script src="main.js"></script>
+    <script src="regularEXP.js"></script>
     <link rel="stylesheet" href="my_eShop.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -18,6 +19,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!--    Vue.js !!   -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="Vue.js"></script>
 </head>
 <body>
 <header class="bg-secondary">
@@ -28,7 +33,7 @@
                     <a class="nav-link active" data-toggle="tab" href="#home">HOME</a>
                 </li>
                 <li class="nav-item rounded-top">
-                    <a class="nav-link" data-toggle="tab" href="#contacts">CONTACTS</a>
+                    <a class="nav-link" data-toggle="tab" href="#contactUs">CONTACT US</a>
                 </li>
             </ul>
             <button class="col-lg-1 col-md-2 ml-auto cart-button btn btn-primary btn-lg" id="cartBtn" type="button">CART</button>
@@ -49,8 +54,36 @@
         <div class="tab-pane p-0 container active" id="home">
             <div class="goods-list d-flex flex-wrap"></div>
         </div>
-        <div class="tab-pane p-0 container" id="contacts">
-            our contacts
+        <div class="tab-pane p-0 container" id="contactUs">
+            <form action="#" method="POST" class="needs-validation">
+                <div class="form-group">
+                    <label for="uname">Фамилия Имя</label>
+                    <input type="text" class="form-control" id="uname" placeholder="Enter your first and last name" name="uname" required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Введите фамилию и через пробел имя. Используйте только буквы.</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone. Pattern: +7(000)000-0000" name="phone" required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter your email. Pattern: mymail@mail.ru, my.mail@mail.ru, or my-mail@mail.ru" name="email" required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Введите сообщение</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                </div>
+                <button type="submit" class="btn btn-warning">Отправить</button>
+                <div id="sent" class="valid-feedback"></div>
+                <div id="failed" class="invalid-feedback"></div>
+            </form>
         </div>
     </div>
 
