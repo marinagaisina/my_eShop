@@ -10,12 +10,12 @@ function makeGETRequest(method, url) {
         // xhr.onload
         // xhr.status == 200 (successful), 404 (not found), 500 (server error)
         xhr.onreadystatechange = function () {
-            //console.log('ready state: '+xhr.readyState);
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
+                    //alert(xhr.responseText);
                     console.log(xhr.responseText+'\n'+xhr.responseXML+'\n'+xhr.status);
-                    const goods = JSON.parse(xhr.responseText);
-                    resolve(goods);
+                    //const goods = JSON.parse(xhr.responseText); - передаем в then и там парсим
+                    resolve(xhr.responseText);
                 } else {
                     reject('Error with status code: ', xhr.status);
                 }
