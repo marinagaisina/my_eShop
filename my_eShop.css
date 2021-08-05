@@ -51,6 +51,14 @@ table td {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.win.gecko .cartContent {
+    background-color: red;
+    position: relative;
+    width: -moz-fit-content;
+    top: 1px;
+    left: 40%;
+}
+
 .cartContent {
     position: relative;
     width: fit-content;
