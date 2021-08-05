@@ -66,10 +66,9 @@ window.onload = () => {
                     setTimeout(() => {
                         showGoodResult.innerText = '';
                     }, 2000);
-                    // form.classList.add('was-validated');
-                    // form.classList.remove('needs-validation');
                     return true;
                 } else {
+                    event.preventDefault();
                     event.stopPropagation();
                     let showBadResult = document.getElementById('failed');
                     showBadResult.innerText = 'Отправка не была осуществлена';
@@ -78,16 +77,14 @@ window.onload = () => {
                         showBadResult.innerText = '';
                         showBadResult.style.display = 'none';
                     }, 2000);
-                    // form.classList.remove('was-validated');
-                    // form.classList.add('needs-validation');
                     return false;
                 }
             }
             form.checkFormValidity();
-            // if (form.checkFormValidity() === false) {
-            //     //event.preventDefault();
-            //     event.stopPropagation();
-            // }
+            if (form.checkFormValidity() === false) {
+                //event.preventDefault();
+                event.stopPropagation();
+            }
             form.classList.add('was-validated');
             // form.classList.remove('needs-validation');
         }, false);
