@@ -52,7 +52,6 @@ table td {
 }
 
 .win.gecko .cartContent {
-    background-color: red;
     position: relative;
     width: -moz-fit-content;
     top: 1px;
